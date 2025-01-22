@@ -30,9 +30,9 @@ Requires(preun): dkms >= 2.2.0.3
 Requires:       gcc, make, perl, diffutils
 Requires(post): gcc, make, perl, diffutils
 %if 0%{?rhel}%{?fedora}%{?mageia}%{?suse_version}%{?openEuler}
-Requires:       kernel-devel <= 6.12.1000
-Requires(post): kernel-devel <= 6.12.1000
-Conflicts:      kernel-devel > 6.12.1000
+Requires:       kernel-devel <= 1000:6.12.1000
+Requires(post): kernel-devel <= 1000:6.12.1000
+Conflicts:      kernel-devel > 1000:6.12.1000
 Obsoletes:      spl-dkms <= %{version}
 %endif
 Provides:       %{module}-kmod = %{version}
