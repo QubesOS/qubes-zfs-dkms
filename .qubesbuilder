@@ -2,7 +2,10 @@ host:
   rpm:
     build:
     - zfs-dkms.spec
+
 source:
   files:
   - url: https://github.com/openzfs/zfs/releases/download/zfs-@VERSION@/zfs-@VERSION@.tar.gz
-    sha512: zfs-@VERSION@.tar.gz.sha512
+    signature: https://github.com/openzfs/zfs/releases/download/zfs-@VERSION@/zfs-@VERSION@.tar.gz.asc
+    pubkeys:
+    - zfs-key.asc
